@@ -1,0 +1,1 @@
+export { MEALS } from "./meals";
