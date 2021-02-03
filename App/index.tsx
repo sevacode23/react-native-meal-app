@@ -8,13 +8,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { MealNavigator } from "./navigation/meal-navigator";
 import { useAppState } from "./index.state";
 import { fetchFonts, handleFontsLoadingError } from "./index.utils";
+import { MainTabNavigator } from "./navigation";
 
 export default function App() {
   const { isFontsLoaded, onFontsLoaded } = useAppState();
 
   let renderContent = isFontsLoaded ? (
     <NavigationContainer>
-      <MealNavigator />
+      <MainTabNavigator />
     </NavigationContainer>
   ) : (
     <AppLoading

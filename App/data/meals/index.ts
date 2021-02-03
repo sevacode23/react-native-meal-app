@@ -1,2 +1,2 @@
 export { MEALS } from "./meals";
-export { getCategoryMeals } from "./meals.utils";
+export { getCategoryMeals, findMeal } from "./meals.utils";

@@ -44,6 +44,12 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 15,
     height: sizes.width < 350 ? 120 : 150,
+    borderRadius: 6,
+    shadowColor: "black",
+    shadowOpacity: 0.26,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 5,
   },
   touchableWrap: {
     flexGrow: 1,

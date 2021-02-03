@@ -1,22 +1,7 @@
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RouteProp } from "@react-navigation/native";
-
-import { TMealNavigatorList } from "@navigation/meal-navigator";
-import { SCREENS } from "@constants";
 import { FunctionComponent } from "react";
 
-type TCategoryMealsScreenNavigationProp = StackNavigationProp<
-  TMealNavigatorList,
-  SCREENS.CategoryMeals
->;
-type TCategoryMealsScreenRouteProp = RouteProp<
-  TMealNavigatorList,
-  SCREENS.CategoryMeals
->;
+import { ICategoryMealsNavigationProps } from "@navigation/meal-navigator";
 
-interface ICategoryMealsProps {
-  navigation: TCategoryMealsScreenNavigationProp;
-  route: TCategoryMealsScreenRouteProp;
-}
+interface ICategoryMealsProps extends ICategoryMealsNavigationProps {}
 
 export type TCategoryMealsScreen = FunctionComponent<ICategoryMealsProps>;

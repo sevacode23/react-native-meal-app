@@ -1,2 +1,6 @@
 export { MealNavigator } from "./meal-navigator";
-export { TMealNavigatorList } from "./meal-navigator.typing";
+export {
+  TMealNavigatorList,
+  ICategoryMealsNavigationProps,
+  IMealDetailsNavigationProps,
+} from "./meal-navigator.typing";

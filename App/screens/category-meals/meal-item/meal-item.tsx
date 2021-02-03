@@ -13,32 +13,33 @@ import {
 
 import { TMealItem } from "./meal-item.typing";
 
-export const MealItem: TMealItem = (props) => {
+export const MealItem: TMealItem = ({ meal, onMealTap }) => {
   const TouchableComponent =
     Platform.OS === "android" && Platform.Version >= 21
       ? TouchableNativeFeedback
       : TouchableOpacity;
 
+  const handleTap = () => {
+    onMealTap(meal.id);
+  };
+
   return (
     <View style={styles.root}>
       {/* @ts-expect-error */}
-      <TouchableComponent style={styles.touchableWrap}>
+      <TouchableComponent style={styles.touchableWrap} onPress={handleTap}>
         <View style={styles.headerDiv}>
-          <ImageBackground
-            style={styles.image}
-            source={{ uri: props.imageUrl }}
-          >
+          <ImageBackground style={styles.image} source={{ uri: meal.imageUrl }}>
             <View style={styles.titleWrap}>
-              <Text style={styles.title}>{props.title}</Text>
+              <Text style={styles.title}>{meal.title}</Text>
             </View>
           </ImageBackground>
         </View>
         <View style={styles.infoDiv}>
           <Text style={[styles.infoText, styles.infoTextDuration]}>
-            {props.duration}m
+            {meal.duration}m
           </Text>
-          <Text style={styles.infoText}>{props.complexity}</Text>
-          <Text style={styles.infoText}>{props.affordability}</Text>
+          <Text style={styles.infoText}>{meal.complexity}</Text>
+          <Text style={styles.infoText}>{meal.affordability}</Text>
         </View>
       </TouchableComponent>
     </View>

@@ -3,11 +3,10 @@ import { View, StyleSheet } from "react-native";
 
 import { CategoryList } from "./category-list";
 import { TCategoriesScreen } from "./categories.typing";
-import { SCREENS } from "@constants";
 
 export const CategoriesScreen: TCategoriesScreen = ({ navigation }) => {
   const handleGoToCategoryMeals = (categoryId: string) => {
-    navigation.navigate(SCREENS.CategoryMeals, { categoryId });
+    navigation.navigate("CategoryMeals", { categoryId });
   };
 
   return (

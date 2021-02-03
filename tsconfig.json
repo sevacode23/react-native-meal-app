@@ -13,6 +13,9 @@
       "@screens/*": ["App/screens/*"],
       "@assets/*": ["App/assets/*"],
 
+      "@components": ["App/components"],
+      "@components/*": ["App/components/*"],
+
       "@constants": ["App/constants"],
       "@constants/*": ["App/constants/*"],
 

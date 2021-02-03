@@ -1,20 +1,9 @@
-import { TAffordability } from "@models/meal/meal.typing";
+import { IMeal } from "@models";
 import { FunctionComponent } from "react";
 
 export interface IMealItemProps {
-  id: string;
-  categoryIds: string[];
-  title: string;
-  affordability: TAffordability;
-  complexity: string;
-  imageUrl: string;
-  duration: number;
-  ingredients: string[];
-  steps: string[];
-  isGluteenFree: boolean;
-  isVegan: boolean;
-  isVegeterian: boolean;
-  isLactoseFree: boolean;
+  meal: IMeal;
+  onMealTap: (mealId: string) => void;
 }
 
 export type TMealItem = FunctionComponent<IMealItemProps>;

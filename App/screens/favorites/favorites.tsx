@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 export const FavoritesScreen: FunctionComponent = () => {
   return (
     <View style={styles.screen}>
-      <Text>The Category Meal Screen!</Text>
+      <Text>The Favorites Screen!</Text>
     </View>
   );
 };
