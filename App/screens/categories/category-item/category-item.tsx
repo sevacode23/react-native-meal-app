@@ -31,7 +31,7 @@ export const CategoryItem: TCategoryItem = ({
         onPress={onGoToCategoryMeals.bind(this, categoryId)}
         style={styles.touchableWrap}
       >
-        <View style={styles.textContainer}>
+        <View style={styles.textWrap}>
           <Text style={styles.text}>{title}</Text>
         </View>
       </TouchableComponent>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   touchableWrap: {
     flexGrow: 1,
   },
-  textContainer: {
+  textWrap: {
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "flex-end",
