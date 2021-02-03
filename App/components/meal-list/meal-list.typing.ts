@@ -3,7 +3,7 @@ import { FunctionComponent } from "react";
 
 export interface IMealListProps {
   meals: IMeal[];
-  onMealTap: (mealId: string) => void;
+  onTapMeal: (mealId: string) => void;
 }
 
 export type TMealList = FunctionComponent<IMealListProps>;

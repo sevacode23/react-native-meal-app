@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
-import { CategoryList } from "./category-list";
 import { TCategoriesScreen } from "./categories.typing";
+import { CategoryList } from "./category-list";
 
 export const CategoriesScreen: TCategoriesScreen = ({ navigation }) => {
   const handleGoToCategoryMeals = (categoryId: string) => {

@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react";
 import { FlatList } from "react-native";
 
+import { CATEGORIES } from "@data";
+
 import { CategoryItem } from "../category-item";
 import { ICategoryList } from "./category-list.typing";
-import { CATEGORIES } from "@data";
 
 export const CategoryList: FunctionComponent<ICategoryList> = ({
   onGoToCategoryMeals,
@@ -13,7 +14,7 @@ export const CategoryList: FunctionComponent<ICategoryList> = ({
       data={CATEGORIES}
       renderItem={(itemData) => (
         <CategoryItem
-          itemData={itemData}
+          item={itemData.item}
           onGoToCategoryMeals={onGoToCategoryMeals}
         />
       )}

@@ -6,7 +6,7 @@ import { CategoryMealsScreen } from "@screens/category-meals";
 import { MealDetailsScreen } from "@screens/meal-details";
 
 import { TMealNavigatorList } from "./meal-navigator.typing";
-import { defaultScreenOptions } from "./meal-navigator.constants";
+import { defaultMealNavigatorScreenOptions } from "./meal-navigator.constants";
 import {
   setCategoryMealsScreenOptions,
   setMealDetailScreenOptions,
@@ -15,17 +15,13 @@ import {
 const Stack = createStackNavigator<TMealNavigatorList>();
 
 export const MealNavigator = () => (
-  <Stack.Navigator screenOptions={defaultScreenOptions}>
+  <Stack.Navigator screenOptions={defaultMealNavigatorScreenOptions}>
     <Stack.Screen name="Categories" component={CategoriesScreen} />
     <Stack.Screen
       name="CategoryMeals"
       component={CategoryMealsScreen}
       options={setCategoryMealsScreenOptions}
     />
-    <Stack.Screen
-      name="MealDetails"
-      component={MealDetailsScreen}
-      options={setMealDetailScreenOptions}
-    />
+    <Stack.Screen name="MealDetails" component={MealDetailsScreen} />
   </Stack.Navigator>
 );

@@ -7,7 +7,7 @@ import { FavoritesScreen } from "@screens/favorites";
 
 import { MainTabNavigatorList } from "./main-tab-navigator.typing";
 import { COLORS } from "@constants";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { FavoritesNavigator } from "@navigation/favorites-navigator";
 
 const Tab = createMaterialBottomTabNavigator<MainTabNavigatorList>();
 
@@ -32,7 +32,7 @@ export const MainTabNavigator = () => (
     />
     <Tab.Screen
       name="Favorites"
-      component={FavoritesScreen}
+      component={FavoritesNavigator}
       options={{
         tabBarIcon: (tabInfo) => (
           <Ionicons name="ios-star" size={25} color={tabInfo.color} />

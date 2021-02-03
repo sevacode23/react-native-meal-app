@@ -10,8 +10,12 @@ export const MealDetailsScreen: TMealDetailsScreen = ({
   route,
   navigation,
 }) => {
+  const { mealId } = route.params;
+  const mealTitle = findMeal(mealId)?.title;
+
   useEffect(() => {
     navigation.setOptions({
+      title: mealTitle,
       headerRight: () => (
         <FavoriteButton
           onPress={() => {
@@ -20,10 +24,7 @@ export const MealDetailsScreen: TMealDetailsScreen = ({
         />
       ),
     });
-  }, [navigation]);
-
-  const { mealId } = route.params;
-  const mealTitle = findMeal(mealId)?.title;
+  }, [navigation, route]);
 
   return (
     <View style={styles.screen}>

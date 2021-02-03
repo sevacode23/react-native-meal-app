@@ -1,10 +1,9 @@
 import React from "react";
 import { MealNavigator } from "@navigation/meal-navigator";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import { FavoritesScreen } from "@screens/favorites";
+import { FavoritesNavigator } from "@navigation/favorites-navigator";
 
 import { MainTabNavigatorList } from "./main-tab-navigator.typing";
 import { COLORS } from "@constants";
@@ -25,7 +24,7 @@ export const MainTabNavigator = () => (
     />
     <Tab.Screen
       name="Favorites"
-      component={FavoritesScreen}
+      component={FavoritesNavigator}
       options={{
         tabBarIcon: (tabInfo) => (
           <Ionicons name="ios-star" size={25} color={tabInfo.color} />

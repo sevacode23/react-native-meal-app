@@ -1,8 +1,9 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
-import { MealList } from "./meal-list";
+import { MealList } from "@components/meal-list";
 import { getCategoryMeals } from "@data/meals";
+
 import { TCategoryMealsScreen } from "./category-meals.typing";
 
 export const CategoryMealsScreen: TCategoryMealsScreen = ({
@@ -12,15 +13,13 @@ export const CategoryMealsScreen: TCategoryMealsScreen = ({
   const { categoryId } = route.params;
   const categoryMeals = getCategoryMeals(categoryId);
 
-  const handleGoToMealDetails = (mealId: string) => {
+  const handleTapMeal = (mealId: string) => {
     navigation.navigate("MealDetails", { mealId });
   };
 
   return (
     <View style={styles.screen}>
-      <View style={styles.mealListWrap}>
-        <MealList meals={categoryMeals} onMealTap={handleGoToMealDetails} />
-      </View>
+      <MealList meals={categoryMeals} onTapMeal={handleTapMeal} />
     </View>
   );
 };
@@ -29,9 +28,5 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     alignItems: "center",
-  },
-  mealListWrap: {
-    paddingTop: 10,
-    width: "95%",
   },
 });

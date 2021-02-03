@@ -13,11 +13,8 @@ import { TCategoryItem } from "./category-item.typing";
 
 const sizes = Dimensions.get("window");
 
-export const CategoryItem: TCategoryItem = ({
-  itemData,
-  onGoToCategoryMeals,
-}) => {
-  const { id: categoryId, title, color } = itemData.item;
+export const CategoryItem: TCategoryItem = ({ item, onGoToCategoryMeals }) => {
+  const { id: categoryId, title, color } = item;
 
   let TouchableComponent =
     Platform.OS === "android" && Platform.Version >= 21

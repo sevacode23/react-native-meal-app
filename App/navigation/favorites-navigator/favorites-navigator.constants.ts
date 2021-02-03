@@ -3,11 +3,11 @@ import { StackNavigationOptions } from "@react-navigation/stack";
 
 import { COLORS } from "@constants";
 
-export const defaultMealNavigatorScreenOptions: StackNavigationOptions = {
+export const defaultFavoritesNavigatorScreenOptions: StackNavigationOptions = {
   headerStyle: {
-    backgroundColor: Platform.OS === "android" ? COLORS.primary : "",
+    backgroundColor: Platform.OS === "android" ? COLORS.accent : "",
   },
-  headerTintColor: Platform.OS === "android" ? "white" : COLORS.primary,
+  headerTintColor: Platform.OS === "android" ? "white" : COLORS.accent,
   headerTitleStyle: {
     fontFamily: "open-sans-bold",
   },
